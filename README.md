@@ -1,5 +1,9 @@
 # spotify-web
 
 Run the project with
-```yarn install
-```yarn dev
+
+``` yarn install ```
+
+and
+
+``` yarn dev ```
