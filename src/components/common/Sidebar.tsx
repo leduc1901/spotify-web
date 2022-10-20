@@ -1,4 +1,4 @@
-import { useTheme } from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
 import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
 
@@ -10,13 +10,26 @@ export const Sidebar = () => {
       sx={{
         width: 300,
         height: "100%",
-        textAlign: "center",
         bgcolor: theme.palette.semantic.gray["300"],
       }}
     >
-      <Link to="/">Home</Link>
-      <Link to="/library">Library</Link>
-      <Link to="/search">Search</Link>
+      <Box sx={{ display: "flex", flexDirection: "column", p: 6, gap: 2 }}>
+        <Link to="/">
+          <Typography color="white" fontWeight={500} fontSize={24}>
+            Home
+          </Typography>
+        </Link>
+        <Link to="/search">
+          <Typography color="white" fontWeight={500} fontSize={24}>
+            Search
+          </Typography>
+        </Link>
+        <Link to="/library">
+          <Typography color="white" fontWeight={500} fontSize={24}>
+            Library
+          </Typography>
+        </Link>
+      </Box>
     </Box>
   );
 };

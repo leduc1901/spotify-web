@@ -1,6 +1,8 @@
-import { useTheme } from "@mui/material";
+import { Button, useTheme } from "@mui/material";
 import { Box } from "@mui/system";
-
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import { MusicSlider } from "./MusicSlider";
+import { SkipNext, SkipPrevious } from "@mui/icons-material";
 export const Footer = () => {
   const theme = useTheme();
 
@@ -15,7 +17,27 @@ export const Footer = () => {
         bgcolor: theme.palette.semantic.gray["100"],
       }}
     >
-      <Box sx={{ fontSize: 40, fontWeight: 600 }}>Footer</Box>
+      <Box
+        sx={{
+          width: "30%",
+          minWidth: 350,
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <Box sx={{ display: "flex", width: "100%", justifyContent: "center" }}>
+          <Button>
+            <SkipPrevious />
+          </Button>
+          <Button>
+            <PlayArrowIcon />
+          </Button>
+          <Button>
+            <SkipNext />
+          </Button>
+        </Box>
+        <MusicSlider />
+      </Box>
     </Box>
   );
 };

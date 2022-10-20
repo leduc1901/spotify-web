@@ -19,8 +19,8 @@ export function Page({
       <motion.div
         key={Component}
         initial={{ scaleX: 1 }}
-        animate={{ scaleX: 0, transition: { duration: 0.8, ease: "circOut" } }}
-        exit={{ scaleX: 1, transition: { duration: 0.8, ease: "circIn" } }}
+        animate={{ scaleX: 0, transition: { duration: 0.8 } }}
+        exit={{ scaleX: 1, transition: { duration: 0.8 } }}
         style={{
           originX: 0,
           backgroundColor: theme.palette.primary.main,
